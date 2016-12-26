@@ -1,0 +1,25 @@
+:root {
+  --img-size: 20em;
+}
+
+body {
+  margin: 0;
+}
+
+.moodboard {
+  box-sizing: border-box;
+  width: 100vw;
+  display: flex;
+  overflow: hidden;
+  flex-wrap:  wrap;
+  justify-content:  center;
+  align-items: center;
+  border: 2em solid hsla(334, 78%, 61%, 1);
+}
+
+.moodboard img {
+  display: block;
+  max-width: var(--img-size);
+  max-height: var(--img-size);
+  margin: 2em;
+}

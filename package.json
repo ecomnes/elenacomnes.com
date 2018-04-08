@@ -50,8 +50,5 @@
     "snazzy": "^7.0.0",
     "standard": "^11.0.0",
     "tape": "^4.6.2"
-  },
-  "dependencies": {
-    "lunchtype.css": "^1.0.1"
   }
 }

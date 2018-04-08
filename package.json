@@ -8,6 +8,7 @@
     "test:deps": "dependency-check ./package.json",
     "test:lint": "standard | snazzy",
     "test:tape": "tape test/* | tap-format-spec",
+    "test:build": "run-s build",
     "build": "npm run clean && run-p build:*",
     "build:css": "postcss src/index.css -o build/bundle.css --config postcss.config.js",
     "build:js": "browserify src/index.js --debug | exorcist build/bundle.js.map > build/bundle.js",

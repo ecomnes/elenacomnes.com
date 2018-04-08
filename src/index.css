@@ -48,3 +48,8 @@ img {
   flex-direction: column;
   justify-content: center
 }
+
+.moodboard a:hover {
+  background: unset;
+  color: unset;
+}

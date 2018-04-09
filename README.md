@@ -1,5 +1,21 @@
-# elenacomnes
+# [elenacomnes.com](https://elenacomnes.com)
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/bcomnes/elenacomnes.com.svg)](https://greenkeeper.io/)
+[![Build Status](https://travis-ci.org/bcomnes/elenacomnes.com.svg?branch=master)](https://travis-ci.org/bcomnes/elenacomnes.com)
+[![devDependencies Status](https://david-dm.org/bcomnes/elenacomnes.com/dev-status.svg)](https://david-dm.org/bcomnes/elenacomnes.com?type=dev)
 
-- [the way moodboard](/static/moodboard)
+Source code for [bret.io](https://elenacomnes.com).
+
+```sh
+npm i
+npm test
+npm start
+npm run build
+```
+
+## Screenshot
+
+![screenshot](screenshot.png)
+
+## License
+
+- Code: CC0

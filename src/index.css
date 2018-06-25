@@ -46,11 +46,6 @@ img {
   margin: var(--margin);
 }
 
-.footer {
-  position: sticky;
-  bottom: 1px;
-}
-
 .moodboard {
   height: 100vh;
   max-width: 100vh;

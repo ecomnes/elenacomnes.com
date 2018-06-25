@@ -2,7 +2,7 @@
   "name": "elenacomnes.com",
   "version": "1.0.0",
   "description": "A website",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "run-s test:*",
     "test:deps": "dependency-check ./package.json",

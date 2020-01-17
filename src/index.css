@@ -1,3 +1,5 @@
+@import "mine.css";
+
 :root {
   --margin: 1em;
 }
@@ -20,7 +22,7 @@ a {
   transition: 0.3s;
 }
 
-a:hover { 
+a:hover {
   background: black;
   color: white;
 }
@@ -36,7 +38,7 @@ img {
 
 .top-nav {
   position: sticky;
-  top: -1px;
+  top: 0px;
   right: var(--margin);
   padding-top: var(--margin);
   align-self: flex-end;
@@ -58,4 +60,13 @@ img {
 .moodboard a:hover {
   background: unset;
   color: unset;
+}
+
+@supports(padding: max(0px)) {
+  body {
+      padding-top: env(safe-area-inset-top);
+      padding-left: env(safe-area-inset-left);
+      padding-right: env(safe-area-inset-right);
+      padding-bottom: env(safe-area-inset-bottom);
+  }
 }

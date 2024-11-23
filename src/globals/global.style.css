@@ -1,4 +1,4 @@
-@import "mine.css";
+@import 'mine.css/dist/mine.css';
 
 :root {
   --margin: 1em;

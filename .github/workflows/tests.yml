@@ -1,6 +1,9 @@
 name: tests
 
-on: [push]
+on: [push, pull_request]
+
+env:
+  FORCE_COLOR: 2
 
 jobs:
   test:
@@ -9,13 +12,25 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: ['lts/*']
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v4
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm i
     - run: npm test
+
+  automerge:
+    needs: test
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: write
+    steps:
+      - uses: fastify/github-action-merge-dependabot@v3
+        if: ${{ github.actor == 'dependabot[bot]' && github.event_name == 'pull_request' && contains(github.head_ref, 'dependabot/github_actions') }}
+        with:
+          github-token: ${{secrets.github_token}}

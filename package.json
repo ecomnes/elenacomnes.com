@@ -30,7 +30,7 @@
     "@tap-format/spec": "^0.2.0",
     "async-neocities": "^4.0.3",
     "mine.css": "^10.0.0",
-    "neostandard": "^0.11.2",
+    "neostandard": "^0.12.0",
     "npm-run-all2": "^7.0.1",
     "top-bun": "^10.0.0"
   },

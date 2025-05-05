@@ -1,135 +1,49 @@
-.logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10em;
+@import 'photoswipe/style.css';
+
+img {
+  max-width:100%;
+}
+
+a.callout {
+  background: black;
+  color: white;
+  text-transform: none;
+}
+
+a.callout:hover {
+  background: white;
+  color: black;
 }
 
 @media (prefers-color-scheme: dark) {
-    .logo img {
-        filter: invert(1);
+    a.callout {
+      background: white;
+      color: black;
+    }
+
+    a.callout:hover {
+      background: black;
+      color: white;
     }
 }
-/* Root + Dark mode (unchanged) */
-:root {
-  --form-background: rgba(250, 249, 247, 1);
-  --form-text: rgba(0, 0, 0, 0.6);
-  --form-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1),
-                 0px 0px 2px rgba(0, 0, 0, 0.2),
-                 inset 0px -1px 1px rgba(0, 0, 0, 0.1),
-                 inset 0px 1px 1px rgba(255, 255, 255, 1);
-  --card-background: rgba(253, 252, 250, 1);
-  --card-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1),
-                 0px 0px 1px rgba(0, 0, 0, 0.4),
-                 inset 0px -1px 2px rgba(0, 0, 0, 0.05),
-                 inset 0px 3px 1px rgba(255, 255, 255, 1);
-  --tint: rgba(223, 96, 81, 1);
+
+
+.pulled-img {
+  float: right; /* or 'left' */
+  width: 200px; /* adjust to preferred size */
+  margin: 0 0 1rem 1rem; /* top right bottom left margin */
+  border-radius: 8px; /* optional, makes it look nicer */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --form-background: rgba(50, 50, 50, 1);
-    --form-text: rgba(255, 255, 255, 0.8);
-    --form-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3),
-                   inset 0px 1px 1px rgba(255, 255, 255, 0.1),
-                   inset 0px 0px 1px rgba(255, 255, 255, 0.1),
-                   inset 0px -2px 0px rgba(0, 0, 0, 0.0);
-    --card-background: rgba(55, 55, 55, 1);
-    --card-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5),
-                   inset 0px 1px 1px rgba(255, 255, 255, 0.2),
-                   inset 0px -1px 0px rgba(0, 0, 0, 0.2);
-    --tint: rgba(254, 215, 9, 1);
-  }
-}
-
-/* Main layout */
-.styled-form {
-  max-width: 30em;
-  margin: 2em auto;
-  background: var(--form-background);
-  box-shadow: var(--form-shadow);
-  border-radius: 0.7em;
-  padding: 2em;
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--form-text);
-}
-
-.styled-form fieldset {
-  border: none;
-  padding: 0;
-  margin: 0;
+.moodboard {
+  border-bottom: 0px;
   display: flex;
   flex-direction: column;
-  gap: 1.5em;
+  justify-content: center;
+  margin-bottom: 5em;
 }
 
-.styled-form legend {
-  font-weight: 700;
-  font-size: 1.5em;
-  margin-bottom: 0.5em;
-  color: var(--form-text);
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.form-group label {
-  margin-bottom: 0.4em;
-  font-weight: 600;
-  font-size: 1em;
-  opacity: 0.5;
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  background: transparent;
-  color: var(--form-text);
-  font-weight: 800;
-  font-family: inherit;
-  font-size: 1em;
-  padding: 1em;
-  border: 1px solid transparent;
-  border-radius: 0.4em;
-  box-shadow: var(--card-shadow);
-}
-
-/* Make textarea larger and autosize-friendly */
-.form-group textarea {
-  min-height: 15em;
-  resize: none;
-  overflow-y: auto;
-}
-
-/* Focus effect */
-.form-group input:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: var(--tint);
-}
-
-/* Submit Button */
-.form-submit {
-  text-align: right;
-}
-
-.form-submit button {
-  font-weight: 800;
-  font-size: 1em;
-  background: transparent;
-  color: var(--tint);
-  border: 1px solid transparent;
-  padding: 0.8em 1.2em;
-  border-radius: 0.4em;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.form-submit button:hover {
-  background: var(--card-background);
-  box-shadow: var(--card-shadow);
+.moodboard a:hover {
+  background: unset;
+  color: unset;
 }

@@ -40,8 +40,8 @@ export default function defaultRootLayout ({
                 </nav>
             </header>
             ${typeof children === 'string'
-                ? html`<section class="feed-container" dangerouslySetInnerHTML="${{ __html: children }}"/>`
-                : html`<section class="feed-container">${children}</section>`
+                ? html`<section class="main-content" dangerouslySetInnerHTML="${{ __html: children }}"/>`
+                : html`<section class="main-content">${children}</section>`
             }
             <footer class="footer">
               <p>© 2025 Elena Comnes</p>

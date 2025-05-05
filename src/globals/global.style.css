@@ -16,6 +16,10 @@ body {
   text-transform: uppercase;
 }
 
+h1 {
+    font-weight: 900;
+}
+
 a {
   color: unset;
   text-decoration: none;
@@ -34,13 +38,16 @@ a:hover {
     }
 }
 
-img {
-  max-width:100%;
-}
-
 ::selection {
   background: black; /* WebKit/Blink Browsers */
   color: white;
+}
+
+@media (prefers-color-scheme: dark) {
+    ::selection {
+        background: white;
+        color: black;
+    }
 }
 
 .top-nav {
@@ -51,22 +58,9 @@ img {
   align-self: flex-end;
 }
 
-.feed-container {
+.main-content {
   margin: var(--margin);
   max-width: 50em;
-}
-
-.moodboard {
-  border-bottom: 0px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-bottom: 5em;
-}
-
-.moodboard a:hover {
-  background: unset;
-  color: unset;
 }
 
 @supports(padding: max(0px)) {

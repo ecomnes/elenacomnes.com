@@ -27,6 +27,13 @@ a:hover {
   color: white;
 }
 
+@media (prefers-color-scheme: dark) {
+    a:hover {
+        background: white;
+        color: black;
+    }
+}
+
 img {
   max-width:100%;
 }
@@ -46,15 +53,15 @@ img {
 
 .feed-container {
   margin: var(--margin);
+  max-width: 50em;
 }
 
 .moodboard {
-  height: 100vh;
-  max-width: 100vh;
   border-bottom: 0px;
   display: flex;
   flex-direction: column;
-  justify-content: center
+  justify-content: center;
+  margin-bottom: 5em;
 }
 
 .moodboard a:hover {

@@ -1,4 +1,3 @@
-// @ts-ignore
 import { html } from 'htm/preact'
 import { render } from 'preact-render-to-string'
 
@@ -35,14 +34,17 @@ export default function defaultRootLayout ({
       ${render(html`
         <body>
             <header class="top-nav">
-                <nav id="#top"><a href="#contact">Elena Comnes</a></nav>
+                <nav id="#top">
+                    <a href="#contact">Elena Comnes</a>
+                    <div>Personal Stylist</div>
+                </nav>
             </header>
             ${typeof children === 'string'
                 ? html`<section class="feed-container" dangerouslySetInnerHTML="${{ __html: children }}"/>`
                 : html`<section class="feed-container">${children}</section>`
             }
             <footer class="footer">
-              <p id="contact">For inquiries please contact <a href="mailto:ecomnes@gmail.com">ecomnes@gmail.com</a></p>
+              <p>© 2025 Elena Comnes</p>
             </footer>
         </body>
       `)}

@@ -22,7 +22,9 @@ export default function defaultRootLayout ({
           <meta charset="utf-8" />
           <title>${title ? `${title}` : ''}${title && siteName ? ' | ' : ''}${siteName}</title>
           <meta name="google-site-verification" content="${googleSiteVerification}" />
+          <script src="https://analytics.ahrefs.com/analytics.js" data-key="QUhmuXWPfQfZDv/AUK4d1Q" async />
           <meta name="viewport" content="width=device-width, user-scalable=no" />
+
           ${scripts
             ? scripts.map(script => html`<script type='module' src="${script.startsWith('/') ? `${basePath ?? ''}${script}` : script}" />`)
             : null}

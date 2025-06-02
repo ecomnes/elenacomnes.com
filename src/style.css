@@ -5,6 +5,10 @@ img {
   max-width:100%;
 }
 
+a {
+  text-decoration: underline;
+}
+
 a.callout {
   background: black;
   color: white;

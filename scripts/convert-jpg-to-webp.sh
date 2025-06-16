@@ -3,7 +3,7 @@ set -euo pipefail
 
 mkdir -p img/thumbs
 
-for img in look*.jpeg; do
+for img in *.jpeg; do
   base=$(basename "$img" .jpeg)
 
   # Convert full-size .webp

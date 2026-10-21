@@ -1,7 +1,9 @@
-@import 'mine.css/dist/mine.css';
+@import 'mine.css';
 
 :root {
   --margin: 1em;
+  /* Keep the portfolio's existing fluid scale and column widths. */
+  --font-size-body: calc(14px + 0.25vw);
 }
 
 body {
@@ -18,6 +20,14 @@ body {
 
 h1 {
     font-weight: 900;
+    line-height: 1.25;
+    text-wrap: wrap;
+}
+
+p {
+  letter-spacing: -0.01em;
+  max-inline-size: none;
+  text-wrap: wrap;
 }
 
 a {

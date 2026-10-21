@@ -99,7 +99,7 @@ a.callout:hover {
 }
 
 /* ---------- hygiene ---------- */
-.figure-grid img { width: 100%; display: block }
+.figure-grid img { width: 100%; display: block; border-radius: 5px }
 
 /* optional: single column on very narrow phones */
 @media (max-width: 600px) {
@@ -111,7 +111,13 @@ a.callout:hover {
 
 /* prevent long captions from blowing out a column */
 .figure-grid figcaption {
+  font-size: 0.75em;
+  color: #7d7d7d;
   overflow-wrap: anywhere;   /* break long words/URLs */
+}
+
+@media (prefers-color-scheme: dark) {
+  .figure-grid figcaption { color: #999 }
 }
 
 .video-container {

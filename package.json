@@ -11,7 +11,8 @@
     "test:lint": "eslint",
     "test:layout": "node --test scripts/layout.test.js",
     "test:build": "run-s build",
-    "build": "npm run clean && run-p build:*",
+    "test:playwright": "playwright test",
+    "build": "run-p build:*",
     "build:domstack": "domstack",
     "watch": "npm run clean && run-p watch:*",
     "watch:domstack": "npm run build:domstack -- --watch --drafts",
@@ -36,7 +37,8 @@
     "mine.css": "^11.1.0",
     "neostandard": "^0.14.0",
     "npm-run-all2": "^9.0.0",
-    "@domstack/static": "12.0.1"
+    "@domstack/static": "12.4.0",
+    "@playwright/test": "^1.65.1"
   },
   "dependencies": {
     "fragtml": "^0.0.10",

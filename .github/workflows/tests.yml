@@ -21,7 +21,15 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm i
+    - name: Install Playwright Chromium
+      run: npx playwright install --with-deps --only-shell chromium
     - run: npm test
+    - name: Upload Playwright failure artifacts
+      if: failure()
+      uses: actions/upload-artifact@v7
+      with:
+        path: test-results/
+        if-no-files-found: ignore
 
   automerge:
     needs: test

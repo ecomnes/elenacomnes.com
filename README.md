@@ -7,10 +7,14 @@ Source code for [elenacomnes.com](https://elenacomnes.com).
 
 ```sh
 npm i
+npx playwright install --only-shell chromium
 npm test
 npm start
 npm run build
 ```
+
+Run `npm run test:playwright` for just the browser smoke tests in `playwright/`.
+Playwright starts and stops a local DOMStack preview.
 
 ## Screenshot
 
